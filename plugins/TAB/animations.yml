@@ -1,0 +1,40 @@
+FooterServerStats:
+  change-interval: 2000
+  texts:
+    - '&3ᴛᴘѕ: &6%tps%'
+    - '&3ᴘɪɴɢ: &6%ping%ms'
+    - '&3ᴍᴇᴍ: &6%memory-used%MB'
+
+HeaderServerName:
+  change-interval: 50
+  texts:
+  - "§x§F§F§A§C§6§4§lPAPA FEDOR CRAFT"
+  - "§x§F§F§A§6§6§3§lPAPA FEDOR CRAFT"
+  - "§x§F§F§9§F§6§1§lPAPA FEDOR CRAFT"
+  - "§x§F§F§9§9§6§0§lPAPA FEDOR CRAFT"
+  - "§x§F§F§9§3§5§E§lPAPA FEDOR CRAFT"
+  - "§x§F§F§8§D§5§D§lPAPA FEDOR CRAFT"
+  - "§x§F§F§8§6§5§B§lPAPA FEDOR CRAFT"
+  - "§x§F§F§8§0§5§A§lPAPA FEDOR CRAFT"
+  - "§x§F§F§7§A§5§8§lPAPA FEDOR CRAFT"
+  - "§x§F§F§7§4§5§7§lPAPA FEDOR CRAFT"
+  - "§x§F§F§6§D§5§5§lPAPA FEDOR CRAFT"
+  - "§x§F§F§6§7§5§4§lPAPA FEDOR CRAFT"
+  - "§x§F§F§6§1§5§2§lPAPA FEDOR CRAFT"
+  - "§x§F§F§5§B§5§1§lPAPA FEDOR CRAFT"
+  - "§x§F§F§5§4§4§F§lPAPA FEDOR CRAFT"
+  - "§x§F§F§4§E§4§E§lPAPA FEDOR CRAFT"
+  - "§x§F§F§5§4§4§F§lPAPA FEDOR CRAFT"
+  - "§x§F§F§5§B§5§1§lPAPA FEDOR CRAFT"
+  - "§x§F§F§6§1§5§2§lPAPA FEDOR CRAFT"
+  - "§x§F§F§6§7§5§4§lPAPA FEDOR CRAFT"
+  - "§x§F§F§6§D§5§5§lPAPA FEDOR CRAFT"
+  - "§x§F§F§7§4§5§7§lPAPA FEDOR CRAFT"
+  - "§x§F§F§7§A§5§8§lPAPA FEDOR CRAFT"
+  - "§x§F§F§8§0§5§A§lPAPA FEDOR CRAFT"
+  - "§x§F§F§8§6§5§B§lPAPA FEDOR CRAFT"
+  - "§x§F§F§8§D§5§D§lPAPA FEDOR CRAFT"
+  - "§x§F§F§9§3§5§E§lPAPA FEDOR CRAFT"
+  - "§x§F§F§9§9§6§0§lPAPA FEDOR CRAFT"
+  - "§x§F§F§9§F§6§1§lPAPA FEDOR CRAFT"
+  - "§x§F§F§A§6§6§3§lPAPA FEDOR CRAFT"

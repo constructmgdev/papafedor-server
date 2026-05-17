@@ -1,0 +1,7 @@
+
+&a&l  Добро пожаловать {PLAYER}!
+
+&a&l  TWITCH: &n&btwitch.tv/papa_fedor
+&a&l  TELEGRAM: &n&bt.me/papa_fedor
+&a&l  DISCORD: &n&bdiscord.gg/xcg75evtGX
+

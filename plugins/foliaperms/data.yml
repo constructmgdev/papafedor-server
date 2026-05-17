@@ -1,0 +1,13 @@
+group-permissions:
+  owner: []
+  default: []
+  admin: []
+group-priorities:
+  owner: 200
+  admin: 100
+  default: 0
+player-permissions: {}
+player-groups:
+  82ae8226-9587-3c27-a635-1422607525e9:
+  - default
+  - admin

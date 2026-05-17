@@ -1,0 +1,154 @@
+# Should the plugin check for updates?
+checkForUpdates: true
+# The server name that should be displayed for the <server_name> placeholder.
+serverName: ''
+# Redis credentials used for communicating between other servers.
+redisCredentials:
+  # Specifies whether Redis support should be enabled.
+  # When enabled, chat messages, broadcasts, and private messages will be handled over Redis.
+  enabled: false
+  url: redis://localhost:6379
+# Configuration for database
+database:
+  # If mysql should be enabled otherwise sqlite will be used
+  mysql: false
+  # The url to the database, only required if mysql is enabled
+  url: jdbc:mysql://localhost:3306/fairychat?autoReconnect=true&useSSL=false
+  # The username to the database, only required if mysql is enabled
+  username: root
+  # The password to the database, only required if mysql is enabled
+  password: ''
+  playerIgnoreTable: player_ignores
+# The format of chat messages in minimessage format.
+# You can use any placeholder from the following list:
+# https://github.com/MiniPlaceholders/MiniPlaceholders/wiki/Placeholders
+# If you wise to use PlaceholderAPI placeholders, you need the following tag
+# <papi:(placeholder name)> e.g. <papi:player_displayname>
+# Built-in placeholders:
+# <sender_name> - The name of the player who sent the message
+# <sender_displayname> - The display name of the player who sent the message
+# <message> - The message that was sent
+# <server_name> - The server name that was configured in the config.yml
+chatFormat: '<papi:luckperms_prefix> <white><sender_displayname></white><gray>: <message></gray>'
+# Define formats based on the player's group.
+# Supported permission systems: LuckPerms
+# You can use any placeholder from PlaceholderAPI or MiniPlaceholder
+# To use placeholders from PlaceholderAPI, use the following format:
+# <papi:(placeholder name)> e.g. <papi:player_displayname>
+groupFormats:
+  someone: <dark_red><sender_displayname></dark_red> <dark_gray>»</dark_gray> <white><message></white>
+# Should the player chat messages be displayed in the console when sent via Redis?
+displayChatInConsole: true
+# Configuration for private messages.
+privateMessaging:
+  # The format used for private messaging as sender.
+  senderFormat: <dark_gray>[<#5E548E>PM</#5E548E>] <gray><sender_name></gray> → <#9F86C0><recipient_name></#9F86C0>
+    »<dark_gray> <gray><message></gray>
+  # The format used for private messaging as receiver.
+  receiverFormat: <dark_gray>[<#5E548E>PM</#5E548E>] <gray><sender_name></gray> →
+    <#9F86C0><recipient_name></#9F86C0> »<dark_gray> <gray><message></gray>
+  # The duration (in seconds) until a recipient can no longer respond.
+  recipientExpirationSeconds: 90
+  # Aliases for commands.
+  aliases:
+    pm:
+    - msg
+    - message
+    - tell
+    - whisper
+    - w
+    reply:
+    - r
+    - answer
+# Configuration for broadcast messages.
+broadcast:
+  # The format used for broadcast messages.
+  format: <dark_gray>[<gradient:#BE95C4:#9F86C0:#5E548E>Broadcast</gradient>]</dark_gray>
+    <gray><message></gray>
+# Enable this if you have other plugins that messes with the chat and introduces legacy chat colors
+legacyColorSupport: false
+# Configuration for custom messages.
+customMessages:
+  # If you want to broadcast the messages to all servers via redis.
+  broadcastDeathMessages: true
+  # If you want to broadcast the messages to all servers via redis.
+  broadcastAdvancementMessages: true
+  # If you want to broadcast the messages to all servers via redis.
+  broadcastJoinMessages: false
+  # If you want to broadcast the messages to all servers via redis.
+  # Be careful, with quick connect like velocity does, the quit event is triggered after the join event, so the message quit message will be sent after the join message.
+  broadcastQuitMessages: false
+  # This will be used for the death and advancement message for replacing the normal player name
+  customName: <sender_displayname>
+# Configuration for mentions.
+mention:
+  format: <#5E548E>@</#5E548E><#BE95C4><highlight_name></#BE95C4>
+  # The format how the name should be triggered. Default is @username
+  mentionNameFormat: <sender_name>
+  # How the name should be formatted. Default is <sender_name>
+  highlightFormat: <sender_name>
+  soundName: block.note_block.pling
+  soundVolume: 1.0
+  soundPitch: 1.2999999523162842
+# Define which strategy to use when limiting players from chatting too fast.
+# Supported strategies:
+# DISABLED - Disable the cooldown
+# MESSAGE_LENGTH - Cooldown based on the length of the message
+# MESSAGE_THRESHOLD - Cooldown based on the amount of messages sent
+cooldownStrategy: DISABLED
+# The cooldown, in seconds, that a player has to wait before chatting again.
+messageThresholdCooldown: 0
+# The threshold, how many messages a player can send before the cooldown is applied.
+messageThresholdAmount: 0
+# The multiplier for how long the cooldown should be based on the length of the message.
+# Example: 0.02 * 100 = 2 seconds cooldown for a 100 character message.
+messageLengthMultiplier: 0.02
+# Prevent duplicate messages from being sent.
+preventSimilarMessages: true
+# How similar the messages have to be to be considered a duplicate.
+similarityPercentage: 0.75
+# The similarity algorithm that should be used.
+# Supported algorithms:
+# LEVENSHTEIN, JARO_WINKLER, JARO, DICE_COEFFICIENT
+similarityAlgorithm: LEVENSHTEIN
+# How long the last messages should be cached for
+similarityMessageCacheSeconds: 5
+# Should players be able to use spoiler tags? Example: ||message||
+spoilerTagsEnabled: true
+# Customize the output of the placeholder <fc_world_name>
+worldNames:
+  world_the_end: <gradient:dark_purple:light_purple>End</gradient:dark_purple:light_purple>
+  world: <gradient:dark_green:green>Overworld</gradient:dark_green:green>
+  world_nether: <gradient:dark_red:red>Nether</gradient:dark_red:red>
+# Configure the plugin's messages.
+# https://github.com/MiniPlaceholders/MiniPlaceholders/wiki/Placeholders
+# If you wise to use PlaceholderAPI placeholders, you need the following tag
+# <papi:(placeholder name)> e.g. <papi:player_displayname>
+messages:
+  youCantMessageYourself: <red>Sorry, you can't message yourself.</red>
+  youDidntMessageAnyone: <red>No recent messages received from anyone.</red>
+  youCantMessageThisPlayer: <red>Sorry, you can't message this player.</red>
+  youCantIgnoreYourself: <red>Sorry, you can't ignore yourself.</red>
+  youUnignoredUser: <gray>You can receive messages from <#5E548E><name></#5E548E>
+    again.</gray>
+  youIgnoredUser: <gray>You will no longer receive messages from <#5E548E><name></#5E548E>.</gray>
+  invalidSyntax: '<gray>Invalid syntax. Usage: <#5E548E><syntax></#5E548E></gray>'
+  # All Placeholders are supported
+  joinMessage: <gray><#5E548E><sender_displayname></#5E548E> joined the server.</gray>
+  # All Placeholders are supported
+  quitMessage: <gray><#5E548E><sender_displayname></#5E548E> left the server.</gray>
+  updateNotification: <newline><gray>A new version of <gradient:#BE95C4:#9F86C0:#5E548E>FairyChat</gradient>
+    is available. You can download it at <#5E548E><click:open_url:'<url>'>here</click></#5E548E>.</gray><newline>
+  # Configure the death message. Keep empty to disable it. Placeholders are supported!
+  deathMessage: <gray><death_message></gray>
+  # Configure the advancement done message. Keep empty to disable it. Placeholders are supported!
+  advancementDoneMessage: <gray><advancement_message></gray>
+  chatCleared: <gray>The chat was cleared.</gray>
+  onCooldown: <gray>You are on cooldown. Please wait <#5E548E><time:'#.0'></#5E548E>
+    seconds.</gray>
+  pluginReloaded: <gray>The plugin configuration was successfully reloaded.</gray>
+  yourLastMessageWasTooSimilar: <red>Your last message was <dark_red>too similar</dark_red>
+    to your previous message.</red>
+# Should the internal placeholders be self closing tags?
+# That means styling while not be applied to childrens of the text components.
+placeholderSelfClosingTags: true
