@@ -15,7 +15,6 @@ plugins/.paper-remapped/
 bStats/
 spark/
 
-*.jar
 !folia.jar
 !paperclip.jar
 
